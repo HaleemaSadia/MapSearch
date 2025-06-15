@@ -8,5 +8,5 @@ MapSearch – Google Places Search with Maps, History &amp; Redux
   `npm start` 
   
 ###### App Demo
-https://github.com/user-attachments/assets/ffac138e-dd69-430c-9fc8-9d759ae9d09c
+https://github.com/user-attachments/assets/03c83ae7-5a46-4be9-b1f3-c7cad8a5acc2
 
