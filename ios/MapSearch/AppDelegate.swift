@@ -29,7 +29,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       in: window,
       launchOptions: launchOptions
     )
-    GMSServices.provideAPIKey("AIzaSyB11YUHhZK7cWP717r30JnDQEawiebExD4")
+    if let apiKey = Bundle.main.object(forInfoDictionaryKey: "GOOGLE_API_KEY") as? String {
+    GMSServices.provideAPIKey(apiKey)
+}
     return true
   }
 }

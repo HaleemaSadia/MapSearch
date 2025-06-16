@@ -1,6 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-
-const GOOGLE_API_KEY = 'AIzaSyB11YUHhZK7cWP717r30JnDQEawiebExD4';
+import Config from 'react-native-config';
 
 export const placesApi = createApi({
   reducerPath: 'placesApi',
@@ -9,10 +8,10 @@ export const placesApi = createApi({
   }),
   endpoints: (builder) => ({
     searchPlaces: builder.query<any, string>({
-      query: (input) => `autocomplete/json?input=${input}&key=${GOOGLE_API_KEY}&language=en`,
+      query: (input) => `autocomplete/json?input=${input}&key=${Config.GOOGLE_API_KEY}&language=en`,
     }),
     getPlaceDetails: builder.query<any, string>({
-      query: (placeId) => `details/json?place_id=${placeId}&key=${GOOGLE_API_KEY}`,
+      query: (placeId) => `details/json?place_id=${placeId}&key=${Config.GOOGLE_API_KEY}`,
     }),
   }),
 });

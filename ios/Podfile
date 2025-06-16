@@ -25,6 +25,8 @@ target 'MapSearch' do
   )
   pod 'GoogleMaps'
   pod 'GooglePlaces'
+  # Add react-native-config pod here
+  pod 'react-native-config', :path => '../node_modules/react-native-config'
 
   post_install do |installer|
     # https://github.com/facebook/react-native/blob/main/packages/react-native/scripts/react_native_pods.rb#L197-L202
